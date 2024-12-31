@@ -1,0 +1,65 @@
+<html><head>
+    <link rel="icon" type="image/x-icon" href="/images/logos/2025.jpg">
+    <title>Countdown to next year!</title>
+    <style>
+        .topbar {
+            width: 100%;
+            height: 200px;
+            border-radius: 16px;
+            background-color: #7178FF;
+            position: top;
+            display:flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.5s ease
+        }
+
+        .countdown-text {
+            background-color: #D2D2D6;
+            border-radius: 16px;
+            width: 600px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topbar:hover {
+            background-color: #9FA4FD;
+        }
+
+        body {
+            font-family: arial;
+        }
+
+        .air {
+            background-color: transparent;
+            width:30px;
+            
+        }
+    </style>
+</head>
+  <body>
+    <script> var countDownDate = new Date("Dec 1, 2024 21:20:00").getTime(); 
+      var x = setInterval(function() { 
+        var now = new Date().getTime(); 
+        var distance = countDownDate - now; 
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24)); 
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); 
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
+        document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s "; if (distance < 0) { clearInterval(x); document.getElementById("timer").innerHTML = "HAPPY NEW YEAR!"; } }, 1000);
+    </script>
+    
+    <div class="topbar">
+    <div class="air"></div>
+        <img src="/images/logos/2025.jpg" style="width:150px;heigth:150px;border-radius:16px;">
+    <h1 style="color:white">Countdown to next year</h1></div>
+<h3>Current year : 2024 | Next year : 2025</h3>
+<br>
+<div class="countdown-text" style="font-size:24px">
+    <h1 id="timer">0d 2h 46m 18s </h1>
+</div>
+
+
+</body></html>
